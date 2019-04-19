@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import keg from '../assets/images/keg.png';
 
 function Keg(props){
 
@@ -9,6 +10,7 @@ function Keg(props){
       .tableKeg {
         border: 1px solid black;
         text-align: center;
+        backgroundColor: pink;
       }
       h3 {
         color: white;
@@ -18,11 +20,12 @@ function Keg(props){
         cursor: pointer;
       }
     `}</style>
-  <div className="tableKeg">
-      <p>{props.brand}</p>
-      <p>{props.price}</p>
-      <p>{props.flavor}</p>
-    </div>
+      <div className="tableKeg">
+        // <img  style={{width:'100%'}} src={keg}/>
+        <p>{props.brand}</p>
+        <p>{props.price}</p>
+        <p>{props.flavor}</p>
+      </div>
     </div>
   )
 }

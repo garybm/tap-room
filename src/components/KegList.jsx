@@ -57,7 +57,7 @@ var availableKegs = [
 function KegList(){
   const styles={
     display: 'grid',
-    gridTemplateColumns: 'repeat(3,1fr)',
+    gridTemplateColumns: 'repeat(2,2fr)',
     gridGap: '2%'
   };
 
