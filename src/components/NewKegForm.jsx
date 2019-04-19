@@ -1,4 +1,5 @@
 import React from 'react';
+import keg from '../assets/images/keg.png';
 
 function NewKegForm(){
   return (
@@ -8,9 +9,7 @@ function NewKegForm(){
             text-align: center;
           }
           .mainDiv {
-            background-color: green;
-            width: 100%;
-            height: 100vw;
+            width: 50%;
           }
           `}</style>
     <form>

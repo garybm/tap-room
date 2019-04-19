@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import kegtwo from '../assets/images/kegtwo.jpg';
+import keg from '../assets/images/keg.png';
 import { Link } from 'react-router-dom';
 
 function Keg(props){
@@ -22,7 +22,7 @@ function Keg(props){
 
     `}</style>
       <div className="tableKeg">
-        <img src={kegtwo}/>
+        <img src={keg}/>
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>
         <p>Kombucha Flavor: {props.flavor}</p>

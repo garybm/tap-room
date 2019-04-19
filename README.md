@@ -1,39 +1,35 @@
-# BOSE Site Rebuild
+# Tap Room
 
-_Published_  3/29/2019 <br>
+_Published_  4/19/2019 <br>
 _Author_ **Gary Bermudez**
 
 # Description:
 I will be rebuilding the homepage of the Bose website [Bose Homepage](https://www.bose.com/en_us/index.html).
 This is a project I built for school after finishing two weeks of learning ANGULAR to demonstrate understanding of the fundamental concepts. This ANGULAR application includes a working Firebase database and it has been deployed here [My ANGULAR Application](https://site-rebuild-80a1a.firebaseapp.com/).
 
-The homepage will be divided into the following components:
+Here is a list of components I created for this project:
 
 * Header: top navigation menu
-* Hero Section
-* Recommended: The products information is fed by a Firebase database.
-* Bose Home
-* Bose Noise
-* Sunglasses
-* Footer: Social Media
-* Footer: Sign up form
-* Footer Links
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+* KegList: This component acts like the homepage. It will display the list of all kegs.
+* Keg: This component has the structure or model to represent a keg.
+* NewKegForm: This component has a form so that the user can create a new keg with different properties.
+* EditKeg: This component has a form that allows the user to edit an existing keg and change its properties.
+* Error: This is a custom error message for the application.
 
-### Screen captures of the buildout version:
+This project was created using the React Library.
 
-![Header and Hero sections](src/assets/images/sample.png)
-![Recommended](src/assets/images/recommended.png)
-![Product](src/assets/images/sample2.png)
-![Footer](src/assets/images/sample3.png)
+### Here is the app's component structure
+
+![Component structure](src/assets/images/component-structure.jpg)
+
 
 
 # Setup/Installation Requirements
 
 #### Prerequisites:
 * npm package manager
-* Angular CLI
 * Node.js
+* React
 
 #### Cloning the Github repository (Mac OSX):
 ##### Important Note on  Firebase Credentials: If you decide to clone this repository, please make sure to acquire your own Firebase credentials and place them please them in a file `src/app/api-keys.ts`. See example below:
@@ -48,21 +44,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 * Open the Terminal in your computer
 * Make sure you're in your Desktop directory
-* Clone the repository `git clone`: https://github.com/garybm/site-rebuild
+* Clone the repository `git clone`: https://github.com/garybm/tap-room
 * In your Terminal, navigate to the project site-rebuild
 * Run `npm install` in the terminal to install dependencies
-* Run `ng serve --open` in your terminal: The ng serve command launches the server. The --open (or just -o) option automatically opens your browser to http://localhost:4200/.
+* Run `npm run start` in your terminal: The npm run startcommand launches the server. The `start` option automatically opens your browser to http://localhost:8080/#/.
 
 ### Known Bugs
 
 * Media queries have not been applied, the site is currently available only on Desktop view.
 
 ### Technologies Used
-* HTML
-* SCSS
-* Angular
-* Typescript
-* Firebase
+* React
+* JSX
+* CSS
+* Firebase (to be implemented)
 
 ## Support and contact details
 
