@@ -1,36 +1,41 @@
 import React from 'react'
-import Ticket from './Ticket'
+import Ticket from './Keg'
 
-var masterTicketList = [
+var avialableKegs = [
   {
-    names: 'Thato and Haley',
-    location: '3A',
-    issue: 'Firebase won\'t save record. Halp.'
+    brand: '',
+    name: '',
+    price: '';
+    flavor: ''
   },
   {
-    names: 'Sleater and Kinney',
-    location: '4B',
-    issue: 'Fox image not displaying on page, can only see duck?'
+    brand: '',
+    name: '',
+    price: '';
+    flavor: ''
   },
   {
-    names: 'Imani & Jacob',
-    location: '9F',
-    issue: 'Donkey picture not displaying on hover in Zoology app. :('
+    brand: '',
+    name: '',
+    price: '';
+    flavor: ''
   }
 ]
 
-function TicketList(){
+function KegList(){
   return (
     <div>
       <hr/>
-      {masterTicketList.map((ticket, index) =>
-        <Ticket names={ticket.names}
-          location={ticket.location}
-          issue={ticket.issue}
+      {availableKegs.map((keg, index) =>
+        <Keg
+          brand={keg.brand}
+          name={keg.name}
+          price={keg.price}
+          flavor={keg.flavor}
           key={index}/>
       )}
     </div>
   )
 }
 
-export default TicketList
+export default KegList;

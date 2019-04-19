@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Ticket(props){
+function Keg(props){
 
   return (
     <div>
@@ -18,17 +18,20 @@ function Ticket(props){
         cursor: pointer;
       }
     `}</style>
-      <h3> {props.location} - {props.names}</h3>
-      <p><em>{props.issue}</em></p>
+      <p> {props.brand} </p>
+      <p>{props.name}</p>
+      <p>{props.price}</p>
+      <p>{props.flavor}</p>
       <hr/>
     </div>
   )
 }
 
 Ticket.propTypes = {
-  names: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  issue: PropTypes.string,
+  brand: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  flavor:PropTypes.string.isRequired
 }
 
-export default Ticket
+export default Keg;
