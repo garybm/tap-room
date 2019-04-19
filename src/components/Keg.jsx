@@ -6,8 +6,8 @@ function Keg(props){
   return (
     <div>
       <style global jsx>{`
-      div {
-        background-color: pink;
+      .tableKeg {
+        border: 1px solid black;
         text-align: center;
       }
       h3 {
@@ -18,10 +18,11 @@ function Keg(props){
         cursor: pointer;
       }
     `}</style>
+  <div className="tableKeg">
       <p>{props.brand}</p>
       <p>{props.price}</p>
       <p>{props.flavor}</p>
-      <hr/>
+    </div>
     </div>
   )
 }

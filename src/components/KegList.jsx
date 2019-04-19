@@ -55,10 +55,14 @@ var availableKegs = [
 ];
 
 function KegList(){
-  console.log(availableKegs);
+  const styles={
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3,1fr)',
+    gridGap: '2%'
+  };
+
   return (
-    <div>
-      <hr/>
+    <div style={styles}>
       {availableKegs.map((keg, index) =>
         <Keg
           brand={keg.brand}
