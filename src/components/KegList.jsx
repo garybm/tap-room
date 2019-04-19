@@ -3,22 +3,64 @@ import Ticket from './Keg'
 
 var avialableKegs = [
   {
-    brand: '',
+    brand: 'Kevita Master Brew Kombucha',
     name: '',
-    price: '';
-    flavor: ''
+    price: '$200.00';
+    flavor: 'Ginger'
   },
   {
-    brand: '',
+    brand: 'Humm Kombucha',
     name: '',
-    price: '';
-    flavor: ''
+    price: '',
+    flavor: 'Lemon Ginger'
   },
   {
-    brand: '',
+    brand: 'Kombucha Wonder Drink Traditional',
     name: '',
     price: '';
-    flavor: ''
+    flavor: 'Essense Of Lemon'
+  }
+  {
+    brand: 'B-tea Kombucha',
+    name: '',
+    price: '';
+    flavor: 'Green Tea'
+  }
+  {
+    brand: 'Tealixer Herbal Kombucha',
+    name: '',
+    price: '';
+    flavor: 'Herbal'
+  }
+  {
+    brand: 'Brew Dr. Kombucha',
+    name: '',
+    price: '';
+    flavor: 'Ginger'
+  }
+  {
+    brand: 'Health-Ade Kombucha',
+    name: '',
+    price: '';
+    flavor: 'Beet'
+  }
+  {
+    brand: 'Live Kombucha Soda',
+    name: '',
+    price: '';
+    flavor: 'Blueberry'
+  }
+  {
+    brand: 'High Country Kombucha',
+    name: '',
+    price: '';
+    flavor: 'Passion Flower'
+  }
+  {
+    brand: 'Bucha',
+    name: '',
+    price: '';
+    flavor: 'Blood Orange'
   }
 ]
 
