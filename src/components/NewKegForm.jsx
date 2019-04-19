@@ -2,32 +2,34 @@ import React from 'react';
 
 function NewKegForm(){
   return (
-    <div>
-      <form>
-       <style jsx>{`
-         form {
-           text-align: center;
-           position: absolute;
-           top: 75%;
-           left: 50%;
-           transform: translate(-50%, -50%);
-           color: white;
-           width: 100%;
-           height:75%;
-         }
-       `}</style>
+    <div className="mainDiv">
+      <style jsx>{`
+          form{
+            text-align: center;
+          }
+          .mainDiv {
+            background-color: green;
+            width: 100%;
+            height: 100vw;
+          }
+          `}</style>
+    <form>
+     <p>Kombucha Brand Name: </p>
        <input
          type='text'
          id='brands'
-         placeholder='Enter Brand Name'/>
+         placeholder='Brand'/>
+       <p>Enter the flavor: </p>
        <input
          type='text'
          id='flavor'
-         placeholder='Enter Flavor'/>
+         placeholder='Flavor'/>
+       <p>Keg's Price: </p>
          <input
            type='text'
            id='price'
            placeholder='Enter the price'/>
+         <br></br>
          <button type='submit'>Add</button>
      </form>
     </div>

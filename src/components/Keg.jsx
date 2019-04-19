@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import kegtwo from '../assets/images/kegtwo.jpg';
+import { Link } from 'react-router-dom';
 
 function Keg(props){
 
@@ -26,7 +27,7 @@ function Keg(props){
         <p>Keg Price: {props.price}</p>
         <p>Kombucha Flavor: {props.flavor}</p>
         <p>Pints left on this Keg:</p>
-        <button>Edit Keg Info</button> | <button>Sold Pint</button>
+        <Link to="/editkeg"><button>Edit Keg Info</button></Link> | <button>Sold Pint</button>
       </div>
     </div>
   )
