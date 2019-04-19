@@ -12,6 +12,7 @@ function NewKegForm(){
             width: 50%;
           }
           `}</style>
+        
     <form>
      <p>Kombucha Brand Name: </p>
        <input
