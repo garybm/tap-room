@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import KegList from './KegList';
+import NewKegForm from './NewKegForm';
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -9,7 +10,8 @@ function App(){
     <div>
       <Header/>
       <Switch>
-        <Route exact path='/' compoenent={KegList}/>
+        <Route exact path='/' component={KegList}/>
+        <Route exact path='/newkeg' component={NewKegForm}/>
       </Switch>
     </div>
   );
