@@ -1,6 +1,7 @@
 import React from 'react'
 import Keg from './Keg'
 import { Link } from 'react-router-dom';
+import hero2 from '../assets/images/hero2.jpg';
 
 var availableKegs = [
   {
@@ -63,14 +64,38 @@ function KegList(){
   };
 
   return (
-    <div style={styles}>
-      {availableKegs.map((keg, index) =>
-        <Keg
-          brand={keg.brand}
-          price={keg.price}
-          flavor={keg.flavor}
-          key={index}/>
-      )}
+    <div>
+      <div>
+        <img style={{width:'100%', height:'auto'}}src={hero2}/>
+      </div>
+      <div>
+        <style jsx>{`
+            h1 {
+              background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+              color: white;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2;
+              width: 80%;
+              padding: 40px;
+              text-align: center;
+              font-size: 100px;
+            }
+            `}</style>
+          <h1>Kombucha Inventory</h1>
+        </div>
+        <div style={styles}>
+          {availableKegs.map((keg, index) =>
+            <Keg
+              brand={keg.brand}
+              price={keg.price}
+              flavor={keg.flavor}
+              key={index}/>
+          )}
+        </div>
+
     </div>
   )
 }
