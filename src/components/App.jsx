@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './Header'
-import TicketList from './TicketList'
+import KegList from './KegList'
 
 function App(){
   return (
     <div>
       <Header/>
-      <TicketList/>
+      <KegList/>
     </div>
   )
 }
