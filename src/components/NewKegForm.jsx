@@ -1,6 +1,6 @@
 import React from 'react';
 
-function KegForm(){
+function NewKegForm(){
   return (
     <div>
       <form>
@@ -34,4 +34,4 @@ function KegForm(){
   )
 }
 
-export default KegForm;
+export default NewKegForm;
