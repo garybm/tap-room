@@ -55,6 +55,7 @@ var availableKegs = [
 ];
 
 function KegList(){
+  console.log(availableKegs);
   return (
     <div>
       <hr/>
@@ -67,7 +68,6 @@ function KegList(){
       )}
     </div>
   )
-  console.log(availableKegs);
 }
 
 export default KegList;
