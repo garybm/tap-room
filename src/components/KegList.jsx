@@ -2,6 +2,7 @@ import React from 'react'
 import Keg from './Keg'
 import { Link } from 'react-router-dom';
 import hero2 from '../assets/images/hero2.jpg';
+import keg from '../assets/images/keg.png';
 
 var availableKegs = [
   {
@@ -63,10 +64,17 @@ function KegList(){
     gridGap: '2%'
   };
 
+  const flex={
+    display: 'flex',
+    flexDirection:'column',
+    width: '50%',
+    backgroundColor: 'pink',
+    border: '1px solid black'
+  }
   return (
     <div>
       <div>
-        <img style={{width:'100%', height:'auto'}}src={hero2}/>
+        <img style={{width:'100%', height:'700px'}}src={hero2}/>
       </div>
       <div>
         <style jsx>{`
@@ -81,6 +89,7 @@ function KegList(){
               width: 80%;
               padding: 40px;
               text-align: center;
+              align-self: center;
               font-size: 100px;
             }
             `}</style>
@@ -88,11 +97,13 @@ function KegList(){
         </div>
         <div style={styles}>
           {availableKegs.map((keg, index) =>
-            <Keg
-              brand={keg.brand}
-              price={keg.price}
-              flavor={keg.flavor}
-              key={index}/>
+            <div>
+              <Keg
+                brand={keg.brand}
+                price={keg.price}
+                flavor={keg.flavor}
+                key={index}/>
+            </div>
           )}
         </div>
 

@@ -1,34 +1,84 @@
 import React from 'react';
-import keg from '../assets/images/keg.png';
+import hero4 from '../assets/images/hero4.jpg';
 
 function NewKegForm(){
   return (
-    <div className="mainDiv">
-      <style jsx>{`
-          form{
-            text-align: center;
+    <div>
+      <div>
+        <style jsx>{`
+          img {
+            width: 100%;
+            height: 25%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
           }
-          .mainDiv {
-            width: 50%;
-          }
-          `}</style>
-        
+        `}</style>
+      <img src={hero4}/>
+      </div>
     <form>
+      <style jsx>{`
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        width:40%;
+        height: 70%;
+        padding: 5%;
+        background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+      }
+      button {
+        font-size: 2em;
+        width: 30%;
+        height: 15%;
+        align-self: center;
+        margin-top: 5%;
+
+      }
+      button:hover {
+        background-color: green;
+        color: white;
+        cursor: pointer;
+      }
+      input, textarea {
+        height: 10%;
+        font-size: 24px;
+        background-color:transparent;
+        color: white;
+        border: 1px solid white;
+        background-color: rgba(0,0,0, 0.6);
+      }
+      ::placeholder{
+        color: white;
+      }
+      textarea {
+        height: 30%;
+      }
+      p {
+        font-size: 24px;
+      }
+      `}</style>
      <p>Kombucha Brand Name: </p>
        <input
          type='text'
          id='brands'
-         placeholder='Brand'/>
+        />
        <p>Enter the flavor: </p>
        <input
          type='text'
          id='flavor'
-         placeholder='Flavor'/>
+        />
        <p>Keg's Price: </p>
          <input
            type='text'
            id='price'
-           placeholder='Enter the price'/>
+           />
          <br></br>
          <button type='submit'>Add</button>
      </form>
