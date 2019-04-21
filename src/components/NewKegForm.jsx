@@ -1,5 +1,5 @@
-import React from 'react';
-import hero4 from '../assets/images/hero4.jpg';
+import React from 'react'
+import hero4 from '../assets/images/hero4.jpg'
 
 function NewKegForm(){
   return (
@@ -15,10 +15,10 @@ function NewKegForm(){
             position: relative;
           }
         `}</style>
-      <img src={hero4}/>
+        <img src={hero4}/>
       </div>
-    <form>
-      <style jsx>{`
+      <form>
+        <style jsx>{`
       form {
         display: flex;
         flex-direction: column;
@@ -42,7 +42,7 @@ function NewKegForm(){
 
       }
       button:hover {
-        background-color: green;
+        background-color: #CD564F;
         color: white;
         cursor: pointer;
       }
@@ -54,9 +54,6 @@ function NewKegForm(){
         border: 1px solid white;
         background-color: rgba(0,0,0, 0.6);
       }
-      ::placeholder{
-        color: white;
-      }
       textarea {
         height: 30%;
       }
@@ -64,26 +61,26 @@ function NewKegForm(){
         font-size: 24px;
       }
       `}</style>
-     <p>Kombucha Brand Name: </p>
-       <input
-         type='text'
-         id='brands'
+        <p>Kombucha Brand Name: </p>
+        <input
+          type='text'
+          id='brands'
         />
-       <p>Enter the flavor: </p>
-       <input
-         type='text'
-         id='flavor'
+        <p>Enter the flavor: </p>
+        <input
+          type='text'
+          id='flavor'
         />
-       <p>Keg's Price: </p>
-         <input
-           type='text'
-           id='price'
-           />
-         <br></br>
-         <button type='submit'>Add</button>
-     </form>
+        <p>Keg's Price: </p>
+        <input
+          type='text'
+          id='price'
+        />
+        <br></br>
+        <button type='submit'>Add</button>
+      </form>
     </div>
   )
 }
 
-export default NewKegForm;
+export default NewKegForm

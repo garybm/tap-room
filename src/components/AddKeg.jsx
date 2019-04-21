@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function AddKeg() {
   return(
@@ -6,4 +6,4 @@ function AddKeg() {
   )
 }
 
-export default AddKeg;
+export default AddKeg

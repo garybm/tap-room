@@ -1,8 +1,8 @@
 import React from 'react'
 import Keg from './Keg'
-import { Link } from 'react-router-dom';
-import hero2 from '../assets/images/hero2.jpg';
-import keg from '../assets/images/keg.png';
+import { Link } from 'react-router-dom'
+import hero5 from '../assets/images/hero5.jpg'
+import keg from '../assets/images/keg.png'
 
 var availableKegs = [
   {
@@ -55,14 +55,14 @@ var availableKegs = [
     price: '$160.00',
     flavor: 'Blood Orange'
   }
-];
+]
 
 function KegList(){
   const styles={
     display: 'grid',
     gridTemplateColumns: 'repeat(2,2fr)',
     gridGap: '2%'
-  };
+  }
 
   const flex={
     display: 'flex',
@@ -74,7 +74,7 @@ function KegList(){
   return (
     <div>
       <div>
-        <img style={{width:'100%', height:'700px'}}src={hero2}/>
+        <img style={{width:'100%', height:'700px'}}src={hero5}/>
       </div>
       <div>
         <style jsx>{`
@@ -93,22 +93,22 @@ function KegList(){
               font-size: 100px;
             }
             `}</style>
-          <h1>Kombucha Inventory</h1>
-        </div>
-        <div style={styles}>
-          {availableKegs.map((keg, index) =>
-            <div>
-              <Keg
-                brand={keg.brand}
-                price={keg.price}
-                flavor={keg.flavor}
-                key={index}/>
-            </div>
-          )}
-        </div>
+        <h1>Kombucha Inventory</h1>
+      </div>
+      <div style={styles}>
+        {availableKegs.map((keg, index) =>
+          <div>
+            <Keg
+              brand={keg.brand}
+              price={keg.price}
+              flavor={keg.flavor}
+              key={index}/>
+          </div>
+        )}
+      </div>
 
     </div>
   )
 }
 
-export default KegList;
+export default KegList

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import keg from '../assets/images/keg.png';
-import hero from '../assets/images/hero.jpg';
+import { Link } from 'react-router-dom'
+import keg from '../assets/images/keg.png'
+import hero from '../assets/images/hero.jpg'
 
 function Header(){
   const styles ={
@@ -15,16 +15,16 @@ function Header(){
       <div style={styles}>
         <style jsx>{`
             div {
-              background-color: brown;
+              background-color: #262626;
             }
             a {
               text-decoration: none;
-              margin-left: 10%;
+              margin-left: 5%;
               font-size: 25px;
               color: white;
             }
             a:hover {
-              color: red;
+
             }
             img {
               width: 75px;
@@ -32,10 +32,10 @@ function Header(){
 
             }
             `}</style>
-          <a><Link to="/"><img src={keg}/></Link></a>
-          <a><Link to="/" style={{textDecoration: 'none', color: 'white'}}>Home</Link></a>
-          <a><Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} >Add New Keg</Link></a>
-        </div>
+        <a><Link to="/"><img src={keg}/></Link></a>
+        <a><Link to="/" style={{textDecoration: 'none', color: 'white'}}>Home</Link></a>
+        <a><Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} >Add New Keg</Link></a>
+      </div>
     </div>
 
   )
