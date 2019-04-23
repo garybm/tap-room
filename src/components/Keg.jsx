@@ -4,25 +4,31 @@ import { Link } from 'react-router-dom'
 
 
 function Keg(props){
-  var styles ={
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    border: '1px solid black'
-  }
+
+
+  const mainStyle ={
+  display: 'grid',
+  width: '100%',
+  gridTemplateColumns: '50% auto',
+  gridTemplateRows: 'repeat(4,80px)',
+  gridGap: '1%',
+  // backgroundColor: 'lightgray',
+  margin: '150px 1px'
+};
 
 
   return (
     <div>
-      <div style={styles}>
+      <div style={mainStyle}>
         <style jsx>{`
             img {
-              width: 100%;
+              width: 75%;
+              height: 300px;
             }
                 button {
                   font-size: 1em;
                   height: 50%;
-                  width: 50%;
+                  width: 25%;
                   align-self: center;
                   margin-top: 5%;
                   padding: 1.5%;
@@ -37,12 +43,16 @@ function Keg(props){
                   text-decoration: none;
                 }
                   `}</style>
-        <img src={require(`../assets/images/${props.image}`)}></img>
-        <p>Brand: {props.brand}</p>
-        <p>Keg Price: {props.price}</p>
-        <p>Kombucha Flavor: {props.flavor}</p>
-        <p>Pints left on this Keg:</p>
-        <Link to="/editkeg"><button><a>Edit Keg Info</a></button></Link><Link to="/editkeg"><button>Pints</button></Link>
+        <div>
+            <img src={require(`../assets/images/${props.image}`)}></img>
+        </div>
+        <div>
+          <p>Brand: {props.brand}</p>
+          <p>Keg Price: {props.price}</p>
+          <p>Kombucha Flavor: {props.flavor}</p>
+          <p>Pints left on this Keg:</p>
+          <Link to="/editkeg"><button><a>Edit Keg Info</a></button></Link><Link to="/editkeg"><button>Pints</button></Link>
+        </div>
       </div>
     </div>
   )

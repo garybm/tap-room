@@ -69,20 +69,10 @@ var availableKegs = [
 
 function KegList(){
   const styles={
-    display: 'grid',
-    gridTemplateColumns: 'repeat(4,1fr)',
-    gridGap: '2%',
-    textAlign: 'center'
+    display: 'flex',
+    flexDirection: 'column',
   }
 
-  const flex={
-    display: 'flex',
-    flexDirection:'column',
-    width: '50%',
-    backgroundColor: 'gray',
-    border: '1px solid black',
-    textAlign: 'center'
-  }
   return (
     <div>
       <div>
@@ -107,7 +97,7 @@ function KegList(){
             `}</style>
         <h1>Kombucha Inventory</h1>
       </div>
-      <div style={styles}>
+      <div>
         {availableKegs.map((keg, index) =>
           <div>
             <Keg
