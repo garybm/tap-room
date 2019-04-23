@@ -33,7 +33,7 @@ function Header(){
             }
             `}</style>
         <a><Link to="/"><img src={keg}/></Link></a>
-        <a><Link to="/" style={{textDecoration: 'none', color: 'white'}}>Home</Link></a>
+        <a><Link to="/" style={{textDecoration: 'none', color: 'white'}}>Enventory</Link></a>
         <a><Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} >Add New Keg</Link></a>
       </div>
     </div>

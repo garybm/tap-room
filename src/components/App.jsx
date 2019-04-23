@@ -10,6 +10,9 @@ function App(){
   return (
     <div >
       <style global jsx>{`
+          @import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway');
+          @import url('https://fonts.googleapis.com/css?family=Poppins:300|Quicksand|Raleway');
+          @import url('https://fonts.googleapis.com/css?family=Nixie+One|Poppins:300|Quicksand|Raleway');
           *{
             padding:0;
             margin:0;

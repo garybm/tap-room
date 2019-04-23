@@ -76,28 +76,6 @@ function KegList(){
   return (
     <div>
       <div>
-        <img style={{width:'100%', height:'700px'}}src={hero5}/>
-      </div>
-      <div>
-        <style jsx>{`
-            h1 {
-              background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-              color: white;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              z-index: 2;
-              width: 80%;
-              padding: 40px;
-              text-align: center;
-              align-self: center;
-              font-size: 100px;
-            }
-            `}</style>
-        <h1>Kombucha Inventory</h1>
-      </div>
-      <div>
         {availableKegs.map((keg, index) =>
           <div>
             <Keg
