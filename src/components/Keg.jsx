@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import keg from '../assets/images/keg.png'
 import { Link } from 'react-router-dom'
 
 
@@ -17,10 +16,13 @@ function Keg(props){
     <div>
       <div style={styles}>
         <style jsx>{`
+            img {
+              width: 100%;
+            }
                 button {
                   font-size: 1em;
-                  height: 15%;
-                  width: 25%;
+                  height: 50%;
+                  width: 50%;
                   align-self: center;
                   margin-top: 5%;
                   padding: 1.5%;
@@ -35,6 +37,7 @@ function Keg(props){
                   text-decoration: none;
                 }
                   `}</style>
+        <img src={require(`../assets/images/${props.image}`)}></img>
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>
         <p>Kombucha Flavor: {props.flavor}</p>
@@ -46,6 +49,7 @@ function Keg(props){
 }
 
 Keg.propTypes = {
+  image: PropTypes.string,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   flavor:PropTypes.string.isRequired

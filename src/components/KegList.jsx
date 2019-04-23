@@ -6,51 +6,61 @@ import keg from '../assets/images/keg.png'
 
 var availableKegs = [
   {
+    image: 'kevita.jpg',
     brand: 'Kevita Master Brew Kombucha',
     price: '$200.00',
     flavor: 'Ginger'
   },
   {
+    image: 'humm.jpg',
     brand: 'Humm Kombucha',
     price: '$160.00',
     flavor: 'Lemon Ginger'
   },
   {
+    image: 'wonder.jpg',
     brand: 'Kombucha Wonder Drink Traditional',
     price: '$160.00',
     flavor: 'Essense Of Lemon'
   },
   {
+    image: 'b-tea.jpg',
     brand: 'B-tea Kombucha',
     price: '$160.00',
     flavor: 'Green Tea'
   },
   {
+    image: 'tealixer.jpg',
     brand: 'Tealixer Herbal Kombucha',
     price: '$160.00',
     flavor: 'Herbal'
   },
   {
+    image: 'dr-brew.jpg',
     brand: 'Brew Dr. Kombucha',
     price: '$160.00',
     flavor: 'Ginger'
   },
   {
+    image: 'health-aide.jpg',
     brand: 'Health-Ade Kombucha',
     price: '$160.00',
     flavor: 'Beet'
   },
   {
+    image: 'live.jpg',
     brand: 'Live Kombucha Soda',
     price: '$160.00',
     flavor: 'Blueberry'
   },
   {
+    image: 'high-country.jpg',
     brand: 'High Country Kombucha',
     price: '$160.00',
     flavor: 'Passion Flower'
   },
   {
+    image: 'Bucha.jpg',
     brand: 'Bucha',
     price: '$160.00',
     flavor: 'Blood Orange'
@@ -60,16 +70,18 @@ var availableKegs = [
 function KegList(){
   const styles={
     display: 'grid',
-    gridTemplateColumns: 'repeat(2,2fr)',
-    gridGap: '2%'
+    gridTemplateColumns: 'repeat(4,1fr)',
+    gridGap: '2%',
+    textAlign: 'center'
   }
 
   const flex={
     display: 'flex',
     flexDirection:'column',
     width: '50%',
-    backgroundColor: 'pink',
-    border: '1px solid black'
+    backgroundColor: 'gray',
+    border: '1px solid black',
+    textAlign: 'center'
   }
   return (
     <div>
@@ -99,6 +111,7 @@ function KegList(){
         {availableKegs.map((keg, index) =>
           <div>
             <Keg
+              image={keg.image}
               brand={keg.brand}
               price={keg.price}
               flavor={keg.flavor}
