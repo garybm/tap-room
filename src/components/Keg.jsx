@@ -12,7 +12,6 @@ function Keg(props){
   gridTemplateColumns: '50% auto',
   gridTemplateRows: 'repeat(4,80px)',
   gridGap: '1%',
-  // backgroundColor: 'lightgray',
   margin: '150px 1px'
 };
 

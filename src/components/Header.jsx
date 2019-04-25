@@ -16,15 +16,16 @@ function Header(){
         <style jsx>{`
             div {
               background-color: #262626;
+              height: 100px;
             }
             a {
               text-decoration: none;
-              margin-left: 5%;
+              padding: 25px;
               font-size: 25px;
               color: white;
             }
             a:hover {
-
+              color: grey;
             }
             img {
               width: 75px;
@@ -32,9 +33,9 @@ function Header(){
 
             }
             `}</style>
-        <a><Link to="/"><img src={keg}/></Link></a>
-        <a><Link to="/" style={{textDecoration: 'none', color: 'white'}}>Enventory</Link></a>
-        <a><Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} >Add New Keg</Link></a>
+          <Link to="/"><a><img src={keg}/></a></Link>
+        <Link to="/" style={{textDecoration: 'none', color: 'white'}}><a>Inventory</a></Link>
+        <Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} ><a>Add New Keg</a></Link>
       </div>
     </div>
 
