@@ -7,9 +7,20 @@ function Keg(props){
 
 
   let kegInformation =
-    <div  >
-      <div>
+    <div className="mainContainer">
         <style jsx>{`
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-gap: 1%;
+           max-width:100vw;
+           grid-border: 1px solid white;
+
+          .details {
+            display: flex;
+            flex-direction: column;
+          }
+
+
                 img {
                   width: 300px;
                   height: 300px;
@@ -33,12 +44,15 @@ function Keg(props){
                 }
                   `}</style>
         <img className="keg" src={keg}/>
-        <p>Brand: {props.brand}</p>
-        <p>Keg Price: {props.price}</p>
-        <p>Kombucha Flavor: {props.flavor}</p>
-        <h4>{props.formattedWaitTime}</h4>
+        <div className= "details">
+          <p>Brand: {props.brand}</p>
+          <p>Keg Price: {props.price}</p>
+          <p>Kombucha Flavor: {props.flavor}</p>
+          <h4>{props.formattedWaitTime}</h4>
+        </div>
       </div>
-    </div>;
+
+
   if( props.currentRouterPath === '/admin') {
     return (
       <div onClick={() => {props.onKegSelection({brand: props.brand, price: props.price, flavor: props.flavor, formattedWaitTime: props.formattedWaitTime});}}>

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 function KegDetail(props) {
   return (
     <div>
+
       <hr/>
       <h1>{props.selectedKeg.brand}</h1>
       <h2>Sumbitted {props.selectedKeg.formattedWaitTime} ago</h2>
