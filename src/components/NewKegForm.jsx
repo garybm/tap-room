@@ -14,7 +14,7 @@ function NewKegForm(props){
     _brand.value = ''
     _flavor.value = ''
     _price.value = ''
-  }
+    console.log(brand.value);
 
   return (
     <div>

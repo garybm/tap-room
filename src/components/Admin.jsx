@@ -25,3 +25,5 @@ Admin.propTypes = {
   onKegSelection: PropTypes.func.isRequired,
   selectedKeg: PropTypes.object
 }
+
+export default Admin
