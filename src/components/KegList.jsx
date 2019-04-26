@@ -7,15 +7,6 @@ function KegList(props){
 
   return (
     <div>
-      <div>
-        <h1>This is a title</h1>
-        <h2> This is another header</h2>
-      </div>
-      <style jsx>{`
-                border: 1px solid white;
-                margin: 30px;
-                    `}
-      </style>
       {props.kegList.map((keg) =>
         <Keg
           brand={keg.brand}

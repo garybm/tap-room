@@ -14,7 +14,7 @@ function Keg(props){
     margin: '50px'
   }
 
-  const kegInformation =
+  let kegInformation =
     <div>
       <div style={mainStyle}>
         <style jsx>{`

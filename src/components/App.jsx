@@ -5,7 +5,6 @@ import NewKegControl from './NewKegControl'
 import Error404 from './Error404'
 import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
-import Moment from 'moment'
 import Admin from './Admin'
 
 
@@ -17,8 +16,8 @@ class App extends React.Component {
       masterKegList: [],
       selectedKeg: null
     }
-    this.handleAddingKegToList =  this.handleAddingKegToList.bind(this)
-    this.handleChangingSelectedkeg = this.handleAddingKegToList.bind(this)
+    this.handleAddingNewKegToList =  this.handleAddingNewKegToList.bind(this)
+    this.handleChangingSelectedkeg = this.handleAddingNewKegToList.bind(this)
   }
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
@@ -39,7 +38,7 @@ class App extends React.Component {
     this.setState({masterKegList: newMasterKegList})
   }
 
-  handleAddingKegToList (newKeg){
+  handleAddingNewKegToList (newKeg){
     let newMasterKegList = this.state.masterKegList.slice()
     newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true)
     newMasterKegList.push(newKeg)
@@ -83,7 +82,7 @@ class App extends React.Component {
               `}</style>
           <Header/>
           <Switch>
-            <Route exact path='/' render={()=><KegList kegList={this.state.masterKegtList} />}/>
+            <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />}/>
             <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
             <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}  onKegSelection={this.handleChangingSelectedKeg} selectedKeg={this.state.selectedKeg}/>} />
             <Route component={Error404} />
