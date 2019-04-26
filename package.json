@@ -16,6 +16,7 @@
   "dependencies": {
     "file": "^0.2.2",
     "loader": "^2.1.1",
+    "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.2",
     "react-dom": "^15.5.4",

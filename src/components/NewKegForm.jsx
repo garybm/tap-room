@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import Moment from 'moment';
 
 
 function NewKegForm(props){
@@ -14,6 +15,7 @@ function NewKegForm(props){
     _brand.value = ''
     _flavor.value = ''
     _price.value = ''
+    console.log(_brand.value);
   }
 
   return (

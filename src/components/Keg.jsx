@@ -1,27 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import keg from '../assets/images/keg.png';
 
 
 function Keg(props){
 
 
-  const mainStyle ={
-    display: 'grid',
-    width: '100%',
-    gridTemplateColumns: '50% auto',
-    gridTemplateRows: 'repeat(4,100px)',
-    gridGap: '1%',
-    margin: '50px'
-  };
-
   let kegInformation =
-    <div>
-      <div style={mainStyle}>
+    <div  >
+      <div>
         <style jsx>{`
-            img {
-              width: 300px;
-              height: 300px;
-            }
+                img {
+                  width: 300px;
+                  height: 300px;
+                }
                 button {
                   font-size: 1em;
                   height: 50%;
@@ -40,6 +32,7 @@ function Keg(props){
                   text-decoration: none;
                 }
                   `}</style>
+        <img className="keg" src={keg}/>
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>
         <p>Kombucha Flavor: {props.flavor}</p>
