@@ -61,4 +61,4 @@ const masterKegList = [
   }
 ]
 
-export default masterKegList;
+export default masterKegList

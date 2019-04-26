@@ -2,7 +2,6 @@ import React from 'react'
 import Header from './Header'
 import KegList from './KegList'
 import NewKegForm from './NewKegForm'
-import EditKeg from './EditKeg'
 import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
 
@@ -48,7 +47,7 @@ class App extends React .Component {
               `}</style>
           <Header/>
           <Switch>
-            <Route exact path='/' component={KegList}/>
+            <Route exact path='/' render={()=><KegList kegList={this.state.masterKegtList} />}/>
             <Route exact path='/newkeg' component={NewKegForm}/>
           </Switch>
         </div>

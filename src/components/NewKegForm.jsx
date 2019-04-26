@@ -1,7 +1,20 @@
 import React from 'react'
-import hero4 from '../assets/images/hero4.jpg'
+import PropTypes from 'prop-types'
 
-function NewKegForm(){
+
+function NewKegForm(props){
+  let _brand = null
+  let _flavor = null
+  let _price = null
+
+  function handleNewKegSubmission(event) {
+    event.preventDefault()
+    console.log(_brand.value);
+    props.onNewKegCreation({brand: _brand.value, flavor: _flavor.value, price: _price.value})
+    _brand.value = ''
+    _flavor.value = ''
+    _price.value = ''
+  }
 
   return (
     <div>
@@ -48,7 +61,7 @@ function NewKegForm(){
             }
 
             `}</style>
-      <form>
+      <form onSubmit={handleNewKegSubmission} >
         <h1>Add new kegs to the inventory</h1>
         <hr></hr>
         <p>Upload image</p>
@@ -56,22 +69,22 @@ function NewKegForm(){
         <p>Kombucha Brand Name: </p>
         <input
           type='text'
-          id='brands'
-        />
+          id='brand'
+          ref={(input) => {_brand = input}}/>
         <p>Enter the flavor: </p>
         <input
           type='text'
           id='flavor'
-        />
+          ref={(input) => {_flavor = input}}/>
         <p>Keg's Price: </p>
         <input
           type='text'
           id='price'
-        />
+          ref={(input) => {_price = input}}/>
         <p>Total number of pints</p>
         <select
           type='text'
-          id='prints'
+          id='pints'
         >
           <option>1</option>
           <option>2</option>
@@ -90,6 +103,10 @@ function NewKegForm(){
 
     </div>
   )
+}
+
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
 }
 
 export default NewKegForm
