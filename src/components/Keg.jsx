@@ -49,7 +49,6 @@ function Keg(props){
           <p>Brand: {props.brand}</p>
           <p>Keg Price: {props.price}</p>
           <p>Kombucha Flavor: {props.flavor}</p>
-          <p>Pints left on this Keg:</p>
           <Link to="/editkeg"><button><a>Edit Keg Info</a></button></Link><Link to="/editkeg"><button>Pints</button></Link>
         </div>
       </div>

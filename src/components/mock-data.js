@@ -1,4 +1,4 @@
-const availableKegs = [
+const masterKegList = [
   {
     image: 'keg.png',
     brand: 'Kevita Master Brew Kombucha',
@@ -61,4 +61,4 @@ const availableKegs = [
   }
 ]
 
-export default availableKegs
+export default masterKegList;

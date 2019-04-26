@@ -1,7 +1,7 @@
 import React from 'react'
 import Keg from './Keg'
 import hero5 from '../assets/images/hero5.jpg'
-import availableKegs from './mock-data.js'
+import masterKegList from './mock-data.js'
 
 
 function KegList(){
@@ -13,7 +13,7 @@ function KegList(){
         <h2> This is another header</h2>
       </div>
       <div>
-        {availableKegs.map((keg, index) =>
+        {masterKegList.map((keg, index) =>
           <div>
             <style jsx>{`
                 border: 1px solid white;

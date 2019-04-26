@@ -3,12 +3,10 @@ import hero4 from '../assets/images/hero4.jpg'
 
 function NewKegForm(){
 
-  const styles = {
-    width:'100%'
-  }
   return (
-    <div style={styles}>
+    <div>
       <style jsx>{`
+          width:100%;
             form {
               font-size: 16px;
               border: 1px solid white;
@@ -50,45 +48,45 @@ function NewKegForm(){
             }
 
             `}</style>
-        <form>
-          <h1>Add new kegs to the inventory</h1>
-          <hr></hr>
-          <p>Upload image</p>
-          <button>Upload</button>
-          <p>Kombucha Brand Name: </p>
-          <input
-            type='text'
-            id='brands'
-          />
-          <p>Enter the flavor: </p>
-          <input
-            type='text'
-            id='flavor'
-          />
-          <p>Keg's Price: </p>
-          <input
-            type='text'
-            id='price'
-          />
+      <form>
+        <h1>Add new kegs to the inventory</h1>
+        <hr></hr>
+        <p>Upload image</p>
+        <button>Upload</button>
+        <p>Kombucha Brand Name: </p>
+        <input
+          type='text'
+          id='brands'
+        />
+        <p>Enter the flavor: </p>
+        <input
+          type='text'
+          id='flavor'
+        />
+        <p>Keg's Price: </p>
+        <input
+          type='text'
+          id='price'
+        />
         <p>Total number of pints</p>
-          <select
-            type='text'
-            id='prints'
-          >
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
+        <select
+          type='text'
+          id='prints'
+        >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
         </select>
-          <br></br>
-          <button type='submit'>Add</button>
-        </form>
+        <br></br>
+        <button type='submit'>Add</button>
+      </form>
 
     </div>
   )
