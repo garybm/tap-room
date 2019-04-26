@@ -42,22 +42,16 @@ function Keg(props){
                   text-decoration: none;
                 }
                   `}</style>
-        <div>
-          <img src={require(`../assets/images/${props.image}`)}></img>
-        </div>
-        <div>
-          <p>Brand: {props.brand}</p>
-          <p>Keg Price: {props.price}</p>
-          <p>Kombucha Flavor: {props.flavor}</p>
-          <Link to="/editkeg"><button><a>Edit Keg Info</a></button></Link><Link to="/editkeg"><button>Pints</button></Link>
-        </div>
+        <p>Brand: {props.brand}</p>
+        <p>Keg Price: {props.price}</p>
+        <p>Kombucha Flavor: {props.flavor}</p>
+        <Link to="/editkeg"><button><a>Edit Keg Info</a></button></Link><Link to="/editkeg"><button>Pints</button></Link>
       </div>
     </div>
   )
 }
 
 Keg.propTypes = {
-  image: PropTypes.string,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   flavor:PropTypes.string.isRequired

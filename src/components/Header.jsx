@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import keg from '../assets/images/keg.png'
-import hero from '../assets/images/hero.jpg'
+
 
 function Header(){
   const styles ={

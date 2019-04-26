@@ -6,13 +6,20 @@ import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
 
 
-class App extends React .Component {
+class App extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
       masterKegList: [],
     }
+    this.handleAddingKegToList =  this.handleAddingKegToList.bind(this)
+  }
+
+  handleAddingKegToList (newKeg){
+    const newMasterKegList = this.state.masterKegList.slice()
+    newMasterKegList.puch(newKeg)
+    this.setState({masterKegList: newMasterKegList})
   }
 
   render() {

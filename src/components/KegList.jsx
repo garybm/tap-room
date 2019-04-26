@@ -1,10 +1,9 @@
 import React from 'react'
 import Keg from './Keg'
-import hero5 from '../assets/images/hero5.jpg'
-import masterKegList from './mock-data.js'
+import PropTypes from 'prop-types'
 
 
-function KegList(){
+function KegList(props){
 
   return (
     <div>
@@ -12,26 +11,27 @@ function KegList(){
         <h1>This is a title</h1>
         <h2> This is another header</h2>
       </div>
-      <div>
-        {masterKegList.map((keg, index) =>
-          <div>
-            <style jsx>{`
+        <style jsx>{`
                 border: 1px solid white;
                 margin: 30px;
                     `}
-            </style>
-            <Keg
-              image={keg.image}
-              brand={keg.brand}
-              price={keg.price}
-              flavor={keg.flavor}
-              key={index}/>
-          </div>
+        </style>
+        {props.kegList.map((keg, index) =>
+          <Keg
+            brand={keg.brand}
+            price={keg.price}
+            flavor={keg.flavor}
+            key={index}
+            currentRouterPath={props.currentRouterPath}/>
         )}
-      </div>
-
     </div>
   )
 }
+
+KegList.propTypes = {
+  kegList: PropTypes.array,
+  currentRouterPath: PropTypes.string
+}
+
 
 export default KegList

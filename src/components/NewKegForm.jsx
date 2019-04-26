@@ -9,7 +9,6 @@ function NewKegForm(props){
 
   function handleNewKegSubmission(event) {
     event.preventDefault()
-    console.log(_brand.value);
     props.onNewKegCreation({brand: _brand.value, flavor: _flavor.value, price: _price.value})
     _brand.value = ''
     _flavor.value = ''
