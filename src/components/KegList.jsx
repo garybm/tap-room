@@ -17,6 +17,7 @@ function KegList(props){
             brand={keg.brand}
             price={keg.price}
             flavor={keg.flavor}
+            formattedWaitTime={keg.formattedWaitTime}
             currentRouterPath={props.currentRouterPath}
             key={keg.id}
             onKegSelection={props.onKegSelection}/>
