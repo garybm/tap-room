@@ -3,9 +3,9 @@ import Header from './Header';
 import KegList from './KegList';
 import NewKegControl from './NewKegControl';
 import Error404 from './Error404';
-import Footer from './Footer';
 import { Switch, Route } from 'react-router-dom';
 import Admin from './Admin';
+import Footer from './Footer';
 
 
 class App extends React.Component {
@@ -55,9 +55,6 @@ class App extends React.Component {
       <div classNme="page-container">
         <div className="content-wrap">
           <style global jsx>{`
-              @import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway');
-              @import url('https://fonts.googleapis.com/css?family=Poppins:300|Quicksand|Raleway');
-              @import url('https://fonts.googleapis.com/css?family=Nixie+One|Poppins:300|Quicksand|Raleway');
               body {
                 background-color: black;
                 margin: 0;

@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { v4 } from 'uuid'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 
 function NewKegForm(props){
@@ -14,7 +14,7 @@ function NewKegForm(props){
     _brand.value = ''
     _flavor.value = ''
     _price.value = ''
-    console.log(brand.value);
+  }
 
   return (
     <div>
@@ -106,5 +106,6 @@ function NewKegForm(props){
 
 NewKegForm.propTypes = {
   onNewKegCreation: PropTypes.func
-}
-export default NewKegForm
+};
+
+export default NewKegForm;
