@@ -1,22 +1,25 @@
 import React from 'react'
 import Keg from './Keg'
-import { Link } from 'react-router-dom'
 import hero5 from '../assets/images/hero5.jpg'
-import keg from '../assets/images/keg.png'
 import availableKegs from './mock-data.js'
 
 
 function KegList(){
-  const styles={
-    display: 'flex',
-    flexDirection: 'column',
-  }
 
   return (
     <div>
       <div>
+        <h1>This is a title</h1>
+        <h2> This is another header</h2>
+      </div>
+      <div>
         {availableKegs.map((keg, index) =>
           <div>
+            <style jsx>{`
+                border: 1px solid white;
+                margin: 30px;
+                    `}
+            </style>
             <Keg
               image={keg.image}
               brand={keg.brand}

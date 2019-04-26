@@ -8,7 +8,8 @@ function Header(){
     display: 'flex',
     flexDirection: 'row',
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'flex-end'
   }
   return (
     <div>
@@ -20,7 +21,7 @@ function Header(){
             }
             a {
               text-decoration: none;
-              padding: 25px;
+              padding-right: 25px;
               font-size: 25px;
               color: white;
             }
@@ -29,11 +30,11 @@ function Header(){
             }
             img {
               width: 75px;
-              margin-left: 5%;
+              margin-right: 5%;
 
             }
             `}</style>
-          <Link to="/"><a><img src={keg}/></a></Link>
+        <Link to="/"><a><img src={keg}/></a></Link>
         <Link to="/" style={{textDecoration: 'none', color: 'white'}}><a>Inventory</a></Link>
         <Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} ><a>Add New Keg</a></Link>
       </div>

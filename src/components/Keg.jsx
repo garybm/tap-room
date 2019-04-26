@@ -7,13 +7,13 @@ function Keg(props){
 
 
   const mainStyle ={
-  display: 'grid',
-  width: '100%',
-  gridTemplateColumns: '50% auto',
-  gridTemplateRows: 'repeat(4,80px)',
-  gridGap: '1%',
-  margin: '150px 1px'
-};
+    display: 'grid',
+    width: '100%',
+    gridTemplateColumns: '50% auto',
+    gridTemplateRows: 'repeat(4,100px)',
+    gridGap: '1%',
+    margin: '50px'
+  }
 
 
   return (
@@ -21,7 +21,7 @@ function Keg(props){
       <div style={mainStyle}>
         <style jsx>{`
             img {
-              width: 75%;
+              width: 300px;
               height: 300px;
             }
                 button {
@@ -43,7 +43,7 @@ function Keg(props){
                 }
                   `}</style>
         <div>
-            <img src={require(`../assets/images/${props.image}`)}></img>
+          <img src={require(`../assets/images/${props.image}`)}></img>
         </div>
         <div>
           <p>Brand: {props.brand}</p>

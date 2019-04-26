@@ -1,64 +1,64 @@
 const availableKegs = [
   {
-    image: 'kevita.jpg',
+    image: 'keg.png',
     brand: 'Kevita Master Brew Kombucha',
     price: '$200.00',
     flavor: 'Ginger'
   },
   {
-    image: 'humm.jpg',
+    image: 'keg.png',
     brand: 'Humm Kombucha',
     price: '$160.00',
     flavor: 'Lemon Ginger'
   },
   {
-    image: 'wonder.jpg',
+    image: 'keg.png',
     brand: 'Kombucha Wonder Drink Traditional',
     price: '$160.00',
     flavor: 'Essense Of Lemon'
   },
   {
-    image: 'b-tea.jpg',
+    image: 'keg.png',
     brand: 'B-tea Kombucha',
     price: '$160.00',
     flavor: 'Green Tea'
   },
   {
-    image: 'tealixer.jpg',
+    image: 'keg.png',
     brand: 'Tealixer Herbal Kombucha',
     price: '$160.00',
     flavor: 'Herbal'
   },
   {
-    image: 'dr-brew.jpg',
+    image: 'keg.png',
     brand: 'Brew Dr. Kombucha',
     price: '$160.00',
     flavor: 'Ginger'
   },
   {
-    image: 'health-aide.jpg',
+    image: 'keg.png',
     brand: 'Health-Ade Kombucha',
     price: '$160.00',
     flavor: 'Beet'
   },
   {
-    image: 'live.jpg',
+    image: 'keg.png',
     brand: 'Live Kombucha Soda',
     price: '$160.00',
     flavor: 'Blueberry'
   },
   {
-    image: 'high-country.jpg',
+    image: 'keg.png',
     brand: 'High Country Kombucha',
     price: '$160.00',
     flavor: 'Passion Flower'
   },
   {
-    image: 'Bucha.jpg',
+    image: 'keg.png',
     brand: 'Bucha',
     price: '$160.00',
     flavor: 'Blood Orange'
   }
 ]
 
-export default availableKegs;
+export default availableKegs
