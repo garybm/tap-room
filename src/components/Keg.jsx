@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 
 function Keg(props){
@@ -15,8 +14,7 @@ function Keg(props){
     margin: '50px'
   }
 
-
-  return (
+  const kegInformation =
     <div>
       <div style={mainStyle}>
         <style jsx>{`
@@ -45,16 +43,31 @@ function Keg(props){
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>
         <p>Kombucha Flavor: {props.flavor}</p>
-        <Link to="/editkeg"><button><a>Edit Keg Info</a></button></Link><Link to="/editkeg"><button>Pints</button></Link>
+        <h4>{props.formattedWaitTime}</h4>
       </div>
     </div>
-  )
+  if( props.currentRouterPath === '/admin') {
+    return (
+      <div onClick={() => {props.onKegSelection({brand: props.brand, price: props.price, flavor: props.flavor, formattedWaitTime: props.formattedWaitTime})}}>
+        {kegInformation}
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        {kegInformation}
+      </div>
+    )
+  }
 }
 
 Keg.propTypes = {
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  flavor:PropTypes.string.isRequired
+  flavor:PropTypes.string.isRequired,
+  formattedWaitTime: PropTypes.string.isRequired,
+  currentRouterPath: PropTypes.string,
+  onTicketSelection: PropTypes.func
 }
 
 export default Keg

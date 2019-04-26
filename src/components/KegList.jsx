@@ -22,7 +22,8 @@ function KegList(props){
           price={keg.price}
           flavor={keg.flavor}
           currentRouterPath={props.currentRouterPath}
-          key={keg.id}/>
+          key={keg.id}
+          onKegSelection={props.onKegSelection}/>
       )}
     </div>
   )
@@ -30,7 +31,9 @@ function KegList(props){
 
 KegList.propTypes = {
   kegList: PropTypes.array,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onKegSelection: PropTypes.func
+
 }
 
 
