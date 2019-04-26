@@ -16,7 +16,7 @@ function KegList(props){
                 margin: 30px;
                     `}
         </style>
-        {props.kegList.map((keg, index) =>
+        {props.kegList.map((keg,index) =>
           <Keg
             brand={keg.brand}
             price={keg.price}
