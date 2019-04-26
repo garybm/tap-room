@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import KegList from './KegList'
 import NewKegForm from './NewKegForm'
+import NewKegControl from './NewKegControl'
 import Footer from './Footer'
 import { Switch, Route } from 'react-router-dom'
 
@@ -55,7 +56,7 @@ class App extends React.Component {
           <Header/>
           <Switch>
             <Route exact path='/' render={()=><KegList kegList={this.state.masterKegtList} />}/>
-            <Route exact path='/newkeg' component={NewKegForm}/>
+            <Route path='/newkeg' render={()=><NewKegControl onNewKegCreation={this.handleAddingNewTicketToList} />} />
           </Switch>
         </div>
         <Footer className="footer"/>

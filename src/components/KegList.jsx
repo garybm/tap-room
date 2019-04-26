@@ -11,19 +11,19 @@ function KegList(props){
         <h1>This is a title</h1>
         <h2> This is another header</h2>
       </div>
-        <style jsx>{`
+      <style jsx>{`
                 border: 1px solid white;
                 margin: 30px;
                     `}
-        </style>
-        {props.kegList.map((keg,index) =>
-          <Keg
-            brand={keg.brand}
-            price={keg.price}
-            flavor={keg.flavor}
-            key={index}
-            currentRouterPath={props.currentRouterPath}/>
-        )}
+      </style>
+      {props.kegList.map((keg) =>
+        <Keg
+          brand={keg.brand}
+          price={keg.price}
+          flavor={keg.flavor}
+          currentRouterPath={props.currentRouterPath}
+          key={keg.id}/>
+      )}
     </div>
   )
 }
