@@ -100,7 +100,6 @@ function NewKegForm(props){
         <br></br>
         <button type='submit'>Add</button>
       </form>
-
     </div>
   )
 }
@@ -108,5 +107,4 @@ function NewKegForm(props){
 NewKegForm.propTypes = {
   onNewKegCreation: PropTypes.func
 }
-
 export default NewKegForm

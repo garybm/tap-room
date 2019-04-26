@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 
 function Keg(props){
@@ -12,7 +12,7 @@ function Keg(props){
     gridTemplateRows: 'repeat(4,100px)',
     gridGap: '1%',
     margin: '50px'
-  }
+  };
 
   let kegInformation =
     <div>
@@ -45,19 +45,19 @@ function Keg(props){
         <p>Kombucha Flavor: {props.flavor}</p>
         <h4>{props.formattedWaitTime}</h4>
       </div>
-    </div>
+    </div>;
   if( props.currentRouterPath === '/admin') {
     return (
-      <div onClick={() => {props.onKegSelection({brand: props.brand, price: props.price, flavor: props.flavor, formattedWaitTime: props.formattedWaitTime})}}>
+      <div onClick={() => {props.onKegSelection({brand: props.brand, price: props.price, flavor: props.flavor, formattedWaitTime: props.formattedWaitTime});}}>
         {kegInformation}
       </div>
-    )
+    );
   } else {
     return (
       <div>
         {kegInformation}
       </div>
-    )
+    );
   }
 }
 
@@ -68,6 +68,6 @@ Keg.propTypes = {
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   onTicketSelection: PropTypes.func
-}
+};
 
-export default Keg
+export default Keg;

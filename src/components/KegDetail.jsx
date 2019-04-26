@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function KegDetail(props) {
   return (
@@ -11,11 +11,11 @@ function KegDetail(props) {
       <h4><em>{props.selectedKeg.flavor}</em></h4>
       <hr/>
     </div>
-  )
+  );
 }
 
 KegDetail.propTypes ={
   selectedKeg: PropTypes.object
-}
+};
 
-export default KegDetail
+export default KegDetail;

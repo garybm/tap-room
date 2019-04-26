@@ -1,53 +1,53 @@
-import React from 'react'
-import Header from './Header'
-import KegList from './KegList'
-import NewKegControl from './NewKegControl'
-import Error404 from './Error404'
-import Footer from './Footer'
-import { Switch, Route } from 'react-router-dom'
-import Admin from './Admin'
+import React from 'react';
+import Header from './Header';
+import KegList from './KegList';
+import NewKegControl from './NewKegControl';
+import Error404 from './Error404';
+import Footer from './Footer';
+import { Switch, Route } from 'react-router-dom';
+import Admin from './Admin';
 
 
 class App extends React.Component {
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       masterKegList: [],
       selectedKeg: null
-    }
-    this.handleAddingNewKegToList =  this.handleAddingNewKegToList.bind(this)
-    this.handleChangingSelectedkeg = this.handleAddingNewKegToList.bind(this)
+    };
+    this.handleAddingNewKegToList =  this.handleAddingNewKegToList.bind(this);
+    this.handleChangingSelectedKeg = this.handleAddingNewKegToList.bind(this);
   }
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
       this.updateKegElapsedWaitTime(),
     60000
-    )
+    );
   }
 
   componentWillUnmount(){
-    clearInterval(this.waitTimeUpdateTimer)
+    clearInterval(this.waitTimeUpdateTimer);
   }
 
   updatekegElapsedWaitTime() {
-    let newMasterkegList = this.state.masterKegList.slice()
+    let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.forEach((keg) =>
       keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
-    )
-    this.setState({masterKegList: newMasterKegList})
+    );
+    this.setState({masterKegList: newMasterKegList});
   }
 
   handleAddingNewKegToList (newKeg){
-    let newMasterKegList = this.state.masterKegList.slice()
-    newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true)
-    newMasterKegList.push(newKeg)
-    this.setState({masterKegList: newMasterKegList})
+    var newMasterKegList = this.state.masterKegList.slice();
+    newKeg.formattedWaitTime = (newKeg.timeOpen).fromNow(true);
+    newMasterKegList.push(newKeg);
+    this.setState({masterKegList: newMasterKegList});
   }
 
-  handleChangingSelectedKeg(Keg){
-    this.setState({selectedKeg: keg})
-    alert('The selected kegis now: ' + this.state.selectedKeg.brand)
+  handleChangingSelectedKeg(keg){
+    this.setState({selectedKeg: keg});
+    alert('The selected kegis now: ' + this.state.selectedKeg.brand);
   }
 
   render() {
@@ -90,10 +90,8 @@ class App extends React.Component {
         </div>
         <Footer className="footer"/>
       </div>
-    )
-
-
+    );
   }
 }
 
-export default App
+export default App;

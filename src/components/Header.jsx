@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import keg from '../assets/images/keg.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import keg from '../assets/images/keg.png';
 
 
 function Header(){
@@ -10,7 +10,7 @@ function Header(){
     width: '100%',
     alignItems: 'center',
     justifyContent: 'flex-end'
-  }
+  };
   return (
     <div>
       <div style={styles}>
@@ -40,7 +40,7 @@ function Header(){
       </div>
     </div>
 
-  )
+  );
 }
 
-export default Header
+export default Header;

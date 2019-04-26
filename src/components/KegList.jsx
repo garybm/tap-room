@@ -1,6 +1,6 @@
-import React from 'react'
-import Keg from './Keg'
-import PropTypes from 'prop-types'
+import React from 'react';
+import Keg from './Keg';
+import PropTypes from 'prop-types';
 
 
 function KegList(props){
@@ -17,7 +17,7 @@ function KegList(props){
           onKegSelection={props.onKegSelection}/>
       )}
     </div>
-  )
+  );
 }
 
 KegList.propTypes = {
@@ -25,7 +25,7 @@ KegList.propTypes = {
   currentRouterPath: PropTypes.string,
   onKegSelection: PropTypes.func
 
-}
+};
 
 
-export default KegList
+export default KegList;

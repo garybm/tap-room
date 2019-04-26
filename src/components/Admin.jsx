@@ -1,22 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import KegList from './KegList'
-import KegDetail from './KegDetail'
+import React from 'react';
+import PropTypes from 'prop-types';
+import KegList from './KegList';
+import KegDetail from './KegDetail';
 
 
 function Admin(props){
 
-  let optionalSelectedKegContent = null
+  let optionalSelectedKegContent = null;
   if (props.selectedKeg != null){
-    optionalSelectedKegContent =  <KegDetail selectedKeg={props.selectedKeg} />
+    optionalSelectedKegContent =  <KegDetail selectedKeg={props.selectedKeg} />;
   }
   return(
     <div>
       <h2>Admin</h2>
-      <KegDetail/>
-      <KegList kegList={props.kegList} currentRouterPath={props.currentRouterPath} onKegSelection={props.onKegSelection} />
+      {optionalSelectedKegContent}
+      <KegList
+        kegList={props.kegList}
+        currentRouterPath={props.currentRouterPath}
+        onKegSelection={props.onKegSelection} />
     </div>
-  )
+  );
 }
 
 Admin.propTypes = {
@@ -24,6 +27,6 @@ Admin.propTypes = {
   currentRouterPath: PropTypes.string.isRequired,
   onKegSelection: PropTypes.func.isRequired,
   selectedKeg: PropTypes.object
-}
+};
 
-export default Admin
+export default Admin;
