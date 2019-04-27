@@ -7,7 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import Admin from './Admin';
 import Footer from './Footer';
 import Moment from 'moment';
-
+import ImageUpload from './ImageUpload';
 
 class App extends React.Component {
 
@@ -31,7 +31,8 @@ class App extends React.Component {
     clearInterval(this.waitTimeUpdateTimer);
   }
 
-  updatekegElapsedWaitTime() {
+  updateKegElapsedWaitTime() {
+     console.log('check');
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.forEach((keg) =>
       keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
@@ -56,12 +57,13 @@ class App extends React.Component {
       <div classNme="page-container">
         <div className="content-wrap">
           <style global jsx>{`
+              @import url('https://fonts.googleapis.com/css?family=Lora');
               body {
-                background-color: black;
+                background-color: #c1b6a2;
                 margin: 0;
                 padding: 0;
                 color: #FFF;
-                font-family: Quicksand;
+                font-family: 'Lora', serif;
               }
               .page-container {
                 position: relative;
@@ -86,7 +88,6 @@ class App extends React.Component {
             <Route component={Error404} />
           </Switch>
         </div>
-        <Footer className="footer"/>
       </div>
     );
   }

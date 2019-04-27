@@ -9,7 +9,6 @@ function Header(){
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'flex-end'
   };
   return (
     <div>
@@ -36,7 +35,7 @@ function Header(){
             `}</style>
         <Link to="/"><a><img src={keg}/></a></Link>
         <Link to="/" style={{textDecoration: 'none', color: 'white'}}><a>Inventory</a></Link>
-        <Link to="/newkeg" style={{textDecoration: 'none', color: 'white'}} ><a>Add New Keg</a></Link>
+        <Link to="/image" style={{textDecoration: 'none', color: 'white'}}><a>imag</a></Link>
       </div>
     </div>
 
