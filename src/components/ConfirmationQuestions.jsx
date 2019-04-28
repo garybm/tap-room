@@ -5,7 +5,7 @@ function ConfirmationQuestions(props) {
   return(
     <div>
       <style jsx>
-      {`
+        {`
         div {
           height: 100vh;
           display: flex;

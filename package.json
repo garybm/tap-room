@@ -14,8 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@firebase/storage": "^0.2.14",
     "axios": "^0.18.0",
     "file": "^0.2.2",
+    "firebase": "^5.10.1",
     "loader": "^2.1.1",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",

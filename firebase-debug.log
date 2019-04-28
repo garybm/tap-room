@@ -1,0 +1,31 @@
+[debug] [2019-04-28T17:09:34.739Z] ----------------------------------------------------------------------
+[debug] [2019-04-28T17:09:34.742Z] Command:       /usr/local/Cellar/node/11.12.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-04-28T17:09:34.742Z] CLI Version:   6.7.1
+[debug] [2019-04-28T17:09:34.742Z] Platform:      darwin
+[debug] [2019-04-28T17:09:34.742Z] Node Version:  v11.12.0
+[debug] [2019-04-28T17:09:34.743Z] Time:          Sun Apr 28 2019 10:09:34 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-04-28T17:09:34.743Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-28T17:09:34.754Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-28T17:09:34.754Z] > authorizing via signed-in user
+[debug] [2019-04-28T17:09:34.754Z] [iam] checking project tap-room-aa4ef for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2019-04-28T17:09:34.757Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tap-room-aa4ef:testIamPermissions  
+
+[debug] [2019-04-28T17:09:35.458Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-28T17:09:35.461Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tap-room-aa4ef  
+ 
+[debug] [2019-04-28T17:09:35.812Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tap-room-aa4ef'...
+[info] 
+[info] i  deploying database, storage, functions
+[debug] [2019-04-28T17:09:36.097Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received type undefined
+    at validateString (internal/validators.js:125:11)
+    at Object.join (path.js:1036:7)
+    at Config.path (/usr/local/lib/node_modules/firebase-tools/lib/config.js:142:39)
+    at getChildEnvironment (/usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:50:49)
+    at runTargetCommands (/usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:71:14)
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:122:24
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)
+[error] 
+[error] Error: An unexpected error has occurred.

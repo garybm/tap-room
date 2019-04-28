@@ -54,7 +54,7 @@ function Keg(props){
             text-decoration: none;
           }
             `}</style>
-          <img src={'https://via.placeholder.com/150'}/>
+      <img src={'https://via.placeholder.com/150'}/>
       <div className= "details">
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>
