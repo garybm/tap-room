@@ -54,7 +54,7 @@ function Keg(props){
             text-decoration: none;
           }
             `}</style>
-      <img className="keg" src={keg}/>
+          <img src={'https://via.placeholder.com/150'}/>
       <div className= "details">
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>
@@ -67,7 +67,7 @@ function Keg(props){
 
   if( props.currentRouterPath === '/admin') {
     return (
-      <div onClick={() => {props.onKegSelection({brand: props.brand, price: props.price, flavor: props.flavor, formattedWaitTime: props.formattedWaitTime});}}>
+      <div onClick={() => {props.onKegSelection({ brand: props.brand, price: props.price, flavor: props.flavor, formattedWaitTime: props.formattedWaitTime});}}>
         {kegInformation}
       </div>
     );
@@ -86,7 +86,7 @@ Keg.propTypes = {
   flavor:PropTypes.string.isRequired,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
-  onTicketSelection: PropTypes.func
+  onKegSelection: PropTypes.func
 };
 
 export default Keg;

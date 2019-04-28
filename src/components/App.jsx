@@ -7,7 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import Admin from './Admin';
 import Footer from './Footer';
 import Moment from 'moment';
-import ImageUpload from './ImageUpload';
+
 
 class App extends React.Component {
 
@@ -32,7 +32,7 @@ class App extends React.Component {
   }
 
   updateKegElapsedWaitTime() {
-     console.log('check');
+    console.log('check');
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.forEach((keg) =>
       keg.formattedWaitTime = (keg.timeOpen).fromNow(true)
@@ -67,7 +67,7 @@ class App extends React.Component {
               }
               .page-container {
                 position: relative;
-                min-height: 100vh;
+                height: 100vh;
               }
               //footer stick to the bottom values//
               .footer {
@@ -76,9 +76,9 @@ class App extends React.Component {
                 width: 100%;
                 // height: 100px;            /* Footer height */
               }
-              .content-wrap {
-                padding-bottom: 100px;    /* Footer height */
-              }
+              // .content-wrap {
+              //   padding-bottom: 100px;    /* Footer height */
+              // }
               `}</style>
           <Header/>
           <Switch>

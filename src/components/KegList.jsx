@@ -1,6 +1,5 @@
 import React from 'react';
 import Keg from './Keg';
-
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +9,6 @@ function KegList(props){
   return (
 
     <div>
-
       <style jsx>{`
           // margin-bottom: 5%;
           button {
