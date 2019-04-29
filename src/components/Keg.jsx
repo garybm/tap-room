@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import keg from '../assets/images/keg.png';
+import ImageUpload from './ImageUpload';
 
 
 function Keg(props){
@@ -27,6 +27,7 @@ function Keg(props){
           .mainContainer {
             border: 2px white solid;
             margin-top: 20px;
+            margin-bottom: 20px;
           }
 
           img {
@@ -36,7 +37,7 @@ function Keg(props){
           }
           button {
             font-size: 1em;
-            height: 50%;
+            height: 40px;;
             width: 25%;
             align-self: center;
             padding: 1.5%;
@@ -54,7 +55,7 @@ function Keg(props){
             text-decoration: none;
           }
             `}</style>
-      <img src={'https://via.placeholder.com/150'}/>
+      <ImageUpload/>
       <div className= "details">
         <p>Brand: {props.brand}</p>
         <p>Keg Price: {props.price}</p>

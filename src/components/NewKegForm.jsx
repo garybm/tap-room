@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import Moment from 'moment';
-import ImageUpload from './ImageUpload';
 
 function NewKegForm(props){
   let _brand = null;
@@ -61,6 +60,9 @@ function NewKegForm(props){
               color: black;
               border: 1px solid white;
             }
+            input {
+              border-radius: 5px;
+            }
             hr {
               color: white;
               width: 90%;
@@ -69,7 +71,6 @@ function NewKegForm(props){
       <form onSubmit={handleNewKegSubmission} >
         <h1>Add new kegs to the inventory</h1>
         <hr></hr>
-        <ImageUpload/>
         <p>Kombucha Brand Name: </p>
         <input
           type='text'
@@ -85,14 +86,6 @@ function NewKegForm(props){
           type='text'
           id='price'
           ref={(input) => {_price = input;}}/>
-        <p>Total number of pints</p>
-        <select
-          type='text'
-          id='pints'
-        >
-          <option>1</option>
-          <option>2</option>
-        </select>
         <br></br>
         <button type='submit'>Add</button>
       </form>
