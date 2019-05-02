@@ -61,7 +61,6 @@ function Keg(props){
         <p>Keg Price: {props.price}</p>
         <p>Kombucha Flavor: {props.flavor}</p>
         <p>Added: {props.formattedWaitTime}</p>
-        <button>Edit</button>
       </div>
     </div>;
 
